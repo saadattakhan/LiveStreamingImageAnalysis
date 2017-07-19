@@ -13,6 +13,9 @@ app = Flask(__name__)
 def index():
 	return render_template("index.html")
 
+
+# def detect(frame,i):
+
 def gen():
 	print("inside gen");
 	try:
@@ -21,11 +24,14 @@ def gen():
 
 		stream=urllib2.urlopen(hoststr)
 		print("streaming started");
+		detector=dlib.simple_object_detector("wireanomaliesdetector.svm")
 
 		bytes=''
 
+		i = 0
 		while True:
 			bytes+=stream.read(1024)
+			
 			a = bytes.find('\xff\xd8')
 			b = bytes.find('\xff\xd9')
 			if a!=-1 and b!=-1:
@@ -36,7 +42,24 @@ def gen():
 				img = Image.open(streamline)
 
 
-				frame=np.array(img)					
+				frame=np.array(img)	
+				color = np.array([0, 255, 0], dtype=np.uint8)
+				
+				i += 1	
+				if i % 10 == 0:
+					dets = detector(frame)
+					for k, d in enumerate(dets):
+						print("Anomaly Detected")
+						boundingbox=(d.left(), d.top()), (d.right(), d.bottom())
+						im = Image.fromarray(frame)
+						dr = ImageDraw.Draw(im)
+						dr.rectangle(((d.left(),d.top()),(d.right(),d.bottom())), outline = "blue")
+						frame=np.array(im)
+
+					# send frame to thread , id
+                                # return frame from thread (with lag) 				
+					
+				
 				
 				convjpg = Image.fromarray(frame)
 				imgByteArr=io.BytesIO()

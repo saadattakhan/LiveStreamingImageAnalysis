@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>
+<dataset>
+<name>imglab dataset</name>
+<comment>Created by imglab tool.</comment>
+<images>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/1.png'>
+    <box top='306' left='627' width='79' height='32'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/10.png'>
+    <box top='328' left='747' width='109' height='49'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/11.png'>
+    <box top='336' left='749' width='106' height='41'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/12.png'>
+    <box top='342' left='832' width='106' height='41'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/13.png'>
+    <box top='346' left='533' width='123' height='51'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/14.png'>
+    <box top='307' left='579' width='252' height='83'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/15.png'>
+    <box top='428' left='727' width='84' height='37'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/16.png'>
+    <box top='385' left='840' width='73' height='35'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/17.png'>
+    <box top='406' left='635' width='99' height='40'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/18.png'>
+    <box top='304' left='850' width='49' height='35'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/19.png'>
+    <box top='338' left='730' width='78' height='39'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/2.png'>
+    <box top='315' left='732' width='82' height='35'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/20.png'>
+    <box top='285' left='713' width='123' height='54'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/21.png'>
+    <box top='278' left='373' width='85' height='40'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/22.png'>
+    <box top='339' left='878' width='70' height='39'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/23.png'>
+    <box top='291' left='444' width='50' height='41'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/24.png'>
+    <box top='305' left='699' width='157' height='68'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/25.png'>
+    <box top='389' left='548' width='197' height='67'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/26.png'>
+    <box top='344' left='779' width='109' height='70'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/27.png'>
+    <box top='319' left='393' width='191' height='65'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/28.png'>
+    <box top='368' left='719' width='58' height='30'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/29.png'>
+    <box top='318' left='620' width='34' height='28'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/3.png'>
+    <box top='357' left='361' width='85' height='33'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/30.png'>
+    <box top='428' left='728' width='52' height='26'/>
+    <box top='313' left='218' width='35' height='26'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/4.png'>
+    <box top='411' left='454' width='44' height='30'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/5.png'>
+    <box top='373' left='574' width='84' height='31'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/6.png'>
+    <box top='502' left='994' width='65' height='31'/>
+    <box top='365' left='331' width='35' height='28'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/7.png'>
+    <box top='492' left='212' width='93' height='34'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/8.png'>
+    <box top='458' left='907' width='62' height='36'/>
+  </image>
+  <image file='/home/inbox-dih/dlib-19.4/examples/wire_anomalies/9.png'>
+    <box top='421' left='560' width='99' height='42'/>
+  </image>
+</images>
+</dataset>
