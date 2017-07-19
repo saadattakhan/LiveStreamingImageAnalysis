@@ -59,11 +59,17 @@ def gen():
 				frame=np.array(img)	
 				color = np.array([0, 255, 0], dtype=np.uint8)
 				
+				buffersize = 30 
+				buffer1 = np.array((buffersize , frame.shape[0] , frame.shape[1] , frame.shape[2]))
 
 				i += 1
+
+				if i <= buffersize:
+					buffer1[i%buffersize] = frame
+
 				if i % 10 == 0:
 					dets = detector(frame)
-					# frame = draw_anot(frame,dets)
+					frame = draw_anot(frame,dets)
 					# show(frame)
 
 				convjpg = Image.fromarray(frame)
