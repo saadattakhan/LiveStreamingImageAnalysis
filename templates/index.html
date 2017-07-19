@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<div id="div1"><h2>Live Video Streaming</h2></div>
+<br />
+<br />
+
+
+<div id="video">
+<img src="{{ url_for('livestream') }}" alt=""/>
+</div>
+
+</body>
+</html>
+
