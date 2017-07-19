@@ -7,19 +7,34 @@ import numpy as np
 import dlib
 import io
 
+from skimage import io as skio
+
 app = Flask(__name__)
 
 @app.route("/")
 def index():
 	return render_template("index.html")
 
+def show(img):
+	skio.imshow(img)
+	skio.show()
 
-# def detect(frame,i):
+def draw_anot(frame,dets):
+	for k, d in enumerate(dets):
+		print("Anomaly Detected")
+		boundingbox=(d.left(), d.top()), (d.right(), d.bottom())
+		print boundingbox
+		im = Image.fromarray(frame)
+		dr = ImageDraw.Draw(im)
+		dr.rectangle(((d.left(),d.top()),(d.right(),d.bottom())), outline = "blue")
+		frame=np.array(im)
+		return frame
 
 def gen():
 	print("inside gen");
 	try:
 		host = "10.15.0.125:8080/video"
+		# host = "10.15.2.7:8080/video"
 		hoststr = 'http://' + host
 
 		stream=urllib2.urlopen(hoststr)
@@ -41,26 +56,16 @@ def gen():
 				streamline = StringIO.StringIO(jpg)
 				img = Image.open(streamline)
 
-
 				frame=np.array(img)	
 				color = np.array([0, 255, 0], dtype=np.uint8)
 				
-				i += 1	
+
+				i += 1
 				if i % 10 == 0:
 					dets = detector(frame)
-					for k, d in enumerate(dets):
-						print("Anomaly Detected")
-						boundingbox=(d.left(), d.top()), (d.right(), d.bottom())
-						im = Image.fromarray(frame)
-						dr = ImageDraw.Draw(im)
-						dr.rectangle(((d.left(),d.top()),(d.right(),d.bottom())), outline = "blue")
-						frame=np.array(im)
+					# frame = draw_anot(frame,dets)
+					# show(frame)
 
-					# send frame to thread , id
-                                # return frame from thread (with lag) 				
-					
-				
-				
 				convjpg = Image.fromarray(frame)
 				imgByteArr=io.BytesIO()
 				convjpg.save(imgByteArr,format="jpeg")
